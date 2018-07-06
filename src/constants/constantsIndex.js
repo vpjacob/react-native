@@ -30,6 +30,51 @@ export const statusHeight = appConfig.appStatusBarHeight;
 
 export const pageHeight = height - statusHeight - footTabHeight;
 
+
+/** 屏幕内边距22 */
+export const screenPadding = fixPx(22)
+
+
+
+export const kHeight = height - fixPx(226)
+
+export const messageBarHeight = fixPx(110)
+export const messageBarHeightOrder = fixPx(50)
+
+export const kHeightNoTabBar = height - fixPx(128)
+
+export const kHeightContentInfo = height - fixPx(228)
+/** 标题文字大小 */
+export const titleFontSize = fixPx(34)
+
+
+/** 消息条高度 */
+export const msgBarHeight = fixPx(60)
+
+/** 主要文字大小28 */
+export const majorFontSize = fixPx(28)
+
+/** 次要文字大小 24*/
+export const minorFontSize = fixPx(24)
+
+/** NavBar高度 */
+export const navBarHeightAndroid = fixPx(130)
+
+export const navBarHeightIOS = fixPx(130) //130 175
+
+export const navBarHeight = Platform.OS === 'ios' ? navBarHeightIOS : navBarHeightAndroid
+
+export const topStartPosition =  Platform.OS === 'ios' ? navBarHeightIOS : navBarHeightAndroid-fixPx(50)
+
+/** 充值图标内边距 */
+export const payIconPadding = fixPx(50)
+
+
+/** 底部投注条高度 */
+export const footBtHeight = fixPx(98)
+
+
+
 /** 主色 */
 export const majorColor = '#e93e44';
 

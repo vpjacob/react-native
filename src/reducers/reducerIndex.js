@@ -1,6 +1,6 @@
 import urlInit from './urlInit';
-import navReducers from './navReducers';
+import nav from './navReducers';
 const rootReducer = {
-urlInit,navReducers
+urlInit,nav
 };
 export default rootReducer;

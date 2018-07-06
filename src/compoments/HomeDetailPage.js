@@ -11,11 +11,13 @@ import {
     View
 } from 'react-native';
 import BasePage from "./BasePage";
+import FakeNavBar from "../weight/FakeNavBar";
 
 export default class HomeDetailPage extends BasePage {
     render() {
-
+        const {navigation } = this.props;
         return (
+            <FakeNavBar title={'二级页面'} navigation={navigation}>
             <View style={styles.container}>
                 <Text style={styles.welcome}>
                     Welcome to 二级页面，二级页面!
@@ -24,6 +26,7 @@ export default class HomeDetailPage extends BasePage {
                     二级页面，二级页面
                 </Text>
             </View>
+            </FakeNavBar>
         );
     }
 
