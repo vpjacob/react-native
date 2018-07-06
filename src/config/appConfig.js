@@ -1,29 +1,29 @@
-import {  Platform, NetInfo } from 'react-native';
-import DeviceInfo from 'react-native-device-info';
+// import {  Platform, NetInfo } from 'react-native';
+// import DeviceInfo from 'react-native-device-info';
 
 
-export const APP_VERSION = DeviceInfo.getVersion();
+// export const APP_VERSION = DeviceInfo.getVersion();
 
 /**
  * 设备信息
  */
-export const DEVICE_INFO = DeviceInfo.getUserAgent();
+// export const DEVICE_INFO = DeviceInfo.getUserAgent();
 
 /**
  * 苹果型号
  */
-export const DEVICEID = DeviceInfo.getModel();
+// export const DEVICEID = DeviceInfo.getModel();
 
 /**
  * 操作系统
  */
-export const OS = Platform.OS;
+// export const OS = Platform.OS;
 
 /**
  * UID
  */
 
-export let DEVICE_UID = Platform.OS === 'ios' ? DeviceInfo.getUniqueID() : DeviceInfo.getInstanceID();
+// export let DEVICE_UID = Platform.OS === 'ios' ? DeviceInfo.getUniqueID() : DeviceInfo.getInstanceID();
 
 /**
  * App状态栏高度
