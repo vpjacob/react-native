@@ -6,11 +6,11 @@ import reducers from '../reducers/reducerIndex';
 
 const navMiddleware = createReactNavigationReduxMiddleware("root",state => state.nav);
 /*
-*
+* 中间件组合
 * */
 const middlewares = [thunk.withExtraArgument(),navMiddleware];
 /*
-* 中间件组合
+* 
 * */
 const middleware = applyMiddleware(...middlewares);
 /*
