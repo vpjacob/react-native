@@ -9,7 +9,7 @@ import TabBarText from "../weight/TabBarText";
 import RootPage from "../compoments/RootPage";
 import * as c from "../constants/constantsIndex";
 import TabBarItem from '../weight/TabBarItem';
-import HomeDetailPage from "../compoments/HomeDetailPage";
+import HomeDetailPage from "../container/HomeDetailPageContainer";
 
 const TabNavigtatorConfig = {
     tabBarPosition:'bottom',

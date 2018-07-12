@@ -12,8 +12,22 @@ import {
 } from 'react-native';
 import BasePage from "./BasePage";
 import FakeNavBar from "../weight/FakeNavBar";
+// import actions from '../actions/actionIndex';
 
 export default class HomeDetailPage extends BasePage {
+
+    componentDidMount(){
+        const {actions} = this.props;
+        actions.testAction({
+            cbError: ({ code, msg }) => {
+                console.log('');
+            },
+            cbSuccess: ({data}) => {
+                console.log('');
+            }
+        })
+    }
+
     render() {
         const {navigation } = this.props;
         return (
