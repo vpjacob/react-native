@@ -18,18 +18,18 @@ export default class HomeDetailPage extends BasePage {
 
     componentDidMount(){
         const {actions} = this.props;
-        actions.testAction({
+        actions.testAction({},{
             cbError: ({ code, msg }) => {
                 console.log('');
             },
             cbSuccess: ({data}) => {
-                console.log('');
+                console.log(''); 
             }
         })
     }
 
     render() {
-        const {navigation } = this.props;
+        const {navigation ,homeDetail} = this.props;
         return (
             <FakeNavBar title={'二级页面'} navigation={navigation}>
             <View style={styles.container}>
@@ -37,7 +37,7 @@ export default class HomeDetailPage extends BasePage {
                     Welcome to 二级页面，二级页面!
                 </Text>
                 <Text style={styles.instructions}>
-                    二级页面，二级页面
+                    二级页面，二级页面{homeDetail.city}
                 </Text>
             </View>
             </FakeNavBar>

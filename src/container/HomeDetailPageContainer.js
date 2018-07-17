@@ -5,7 +5,8 @@ import {bindActionCreators} from 'redux';
 import HomeDetailPage from '../compoments/HomeDetailPage';
 
 const mapStateToProps = (state) => ({
-    route:state.nav
+    route:state.nav,
+    homeDetail:state.homeDetail
 })
 
 const mapDispatchToProps = (dispatch) => ({

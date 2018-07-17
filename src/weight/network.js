@@ -41,12 +41,10 @@ export const makeAsyncAction = (params) => {
             return resp.data
         }).then(json => {
             const { code, msg } = json
-            if (code === "0000") {
+            if (code === 0) {
                 if (success) {
-
                     dispatch({ ...json, type: success, args, params, reqParams, reqOpts })
                 }
-
                 if (reqOpts && reqOpts.cbSuccess) {
                     reqOpts.cbSuccess({ ...json, args })
                 }
@@ -54,7 +52,6 @@ export const makeAsyncAction = (params) => {
                 if (error) {
                     dispatch({ ...json, type: error, args, params, reqParams, reqOpts })
                 }
-
                 if (reqOpts && reqOpts.cbError) {
                     reqOpts.cbError({ ...json, args })
                 }
