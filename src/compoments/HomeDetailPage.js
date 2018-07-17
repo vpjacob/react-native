@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import BasePage from "./BasePage";
 import FakeNavBar from "../weight/FakeNavBar";
+import DeviceInfo from 'react-native-device-info';
 // import actions from '../actions/actionIndex';
 
 export default class HomeDetailPage extends BasePage {
@@ -26,6 +27,7 @@ export default class HomeDetailPage extends BasePage {
                 console.log('====',data); 
             }
         })
+        
     }
 
     render() {
@@ -37,7 +39,7 @@ export default class HomeDetailPage extends BasePage {
                     Welcome to 二级页面，二级页面!
                 </Text>
                 <Text style={styles.instructions}>
-                    二级页面，二级页面
+                    二级页面，二级页面{DeviceInfo.getBundleId()}
                 </Text>
             </View>
             </FakeNavBar>
