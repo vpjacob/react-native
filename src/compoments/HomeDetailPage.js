@@ -23,7 +23,7 @@ export default class HomeDetailPage extends BasePage {
                 console.log('');
             },
             cbSuccess: ({data}) => {
-                console.log(''); 
+                console.log('====',data); 
             }
         })
     }
@@ -37,7 +37,7 @@ export default class HomeDetailPage extends BasePage {
                     Welcome to 二级页面，二级页面!
                 </Text>
                 <Text style={styles.instructions}>
-                    二级页面，二级页面{homeDetail.city}
+                    二级页面，二级页面
                 </Text>
             </View>
             </FakeNavBar>
