@@ -3,6 +3,7 @@
 import {store} from '../../App';
 import _ from 'lodash';
 import axios from 'axios';
+import {getNetStatus} from './networkTools';
 
 export const createSourceToken = () => {
     const CancelToken = axios.CancelToken;

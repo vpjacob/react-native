@@ -13,7 +13,6 @@ import {
 } from 'react-native';
 import BasePage from "./BasePage";
 
-type Props = {};
 export default class MinePage extends BasePage {
   render() {
     return (

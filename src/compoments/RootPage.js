@@ -13,7 +13,6 @@ import {
 import BasePage from "./BasePage";
 
 
-type Props = {};
 export default class RootPage extends BasePage {
   render() {
     return (
