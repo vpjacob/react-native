@@ -4,6 +4,7 @@ import {store} from '../../App';
 import _ from 'lodash';
 import axios from 'axios';
 import {getNetStatus} from './networkTools';
+import {asyncLog} from './common';
 
 export const createSourceToken = () => {
     const CancelToken = axios.CancelToken;
@@ -30,6 +31,7 @@ export const makeAsyncAction = (params) => {
         const timeout = reqOpts && reqOpts.timeout ? reqOpts.timeout : 10000;
         const cancelToken = reqOpts && reqOpts.cancelToken ? reqOpts.cancelToken : null;
         const reqUrl = getUrl() + url;
+        asyncLog('Send HTTP request:', reqUrl, reqParams);
         axios({
             url:reqUrl,
             method:'post',
@@ -41,6 +43,7 @@ export const makeAsyncAction = (params) => {
         }).then(resp => {
             return resp.data
         }).then(json => {
+            asyncLog('JSON parsed response:', json);
             const { code, msg } = json
             if (code === 0) {
                 if (success) {
@@ -56,6 +59,17 @@ export const makeAsyncAction = (params) => {
                 if (reqOpts && reqOpts.cbError) {
                     reqOpts.cbError({ ...json, args })
                 }
+            }
+        }).catch( ex => {
+            asyncLog('ERROR in HTTP request:', url,ex);
+            const {message} = ex;
+            const code = '9999';
+            const msg = '网络异常';
+            if (error) {
+                dispatch({code,msg,type:error,args,message});
+            }
+            if (reqOpts && reqOpts.cbError){
+                reqOpts.cbError({code,msg,message,args});
             }
         })
 
