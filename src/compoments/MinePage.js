@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import BasePage from "./BasePage";
+import {showMsg} from '../utils/common';
 
 export default class MinePage extends BasePage {
   render() {
@@ -20,7 +21,7 @@ export default class MinePage extends BasePage {
             <Text style={styles.welcome}>
               Welcome to MinePage!
             </Text>
-            <Text style={styles.instructions}>
+            <Text style={styles.instructions} onPress={() => {showMsg('哈哈哈哈')}}>
                 我的，我的，我的，我的
             </Text>
           </View>
