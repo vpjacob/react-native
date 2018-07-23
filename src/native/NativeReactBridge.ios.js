@@ -2,4 +2,4 @@
 
 import { NativeModules } from 'react-native';
 
-export default NativeModules.IOSBridgeTools;
+export default NativeModules.RNBridgeTools;

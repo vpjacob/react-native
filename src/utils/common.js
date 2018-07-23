@@ -9,6 +9,7 @@ import {
   Alert,
   PermissionsAndroid
 } from 'react-native';
+import {AppRouteList} from "../screen/screenindex";
 import NativeReactBridge from '../native/NativeReactBridge';
 import _ from 'lodash';
 
@@ -27,4 +28,17 @@ export const showMsg = (text, position = -20) => {
         return
     }
     NativeReactBridge.displayNativeToast(text);
+}
+
+export const showLoading = () => {
+    NativeReactBridge.displayNativeLoading(true)
+}
+
+export const hideLoading = () => {
+    NativeReactBridge.hiddenNativeLoading();
+}
+
+/**检测路由是否存在*/
+export const isRouteExit = (screenKey) => {
+    return _.get(AppRouteList, screenKey)
 }

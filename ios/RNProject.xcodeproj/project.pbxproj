@@ -38,6 +38,11 @@
 		2FFBD5A5E6EC497A96952CB8 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A64B4E80D9C4C19A87B89D8 /* libRNDeviceInfo.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		ACF134792105761F005F3809 /* RNBridgeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF134782105761F005F3809 /* RNBridgeTools.m */; };
+		ACF1351D210584F8005F3809 /* RNTools.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF134EF210584F7005F3809 /* RNTools.m */; };
+		ACF1351E210584F8005F3809 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF13517210584F8005F3809 /* LoadingView.m */; };
+		ACF1351F210584F8005F3809 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF1351B210584F8005F3809 /* Reachability.m */; };
+		ACF13520210584F8005F3809 /* ArcToCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF1351C210584F8005F3809 /* ArcToCircleLayer.m */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
 
@@ -352,6 +357,16 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8A64B4E80D9C4C19A87B89D8 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
+		ACF134772105761F005F3809 /* RNBridgeTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNBridgeTools.h; path = RNProject/RNBridgeTools.h; sourceTree = "<group>"; };
+		ACF134782105761F005F3809 /* RNBridgeTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNBridgeTools.m; path = RNProject/RNBridgeTools.m; sourceTree = "<group>"; };
+		ACF134EF210584F7005F3809 /* RNTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNTools.m; sourceTree = "<group>"; };
+		ACF13516210584F8005F3809 /* ArcToCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcToCircleLayer.h; sourceTree = "<group>"; };
+		ACF13517210584F8005F3809 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		ACF13518210584F8005F3809 /* RNTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNTools.h; sourceTree = "<group>"; };
+		ACF13519210584F8005F3809 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		ACF1351A210584F8005F3809 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		ACF1351B210584F8005F3809 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		ACF1351C210584F8005F3809 /* ArcToCircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcToCircleLayer.m; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -496,6 +511,9 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				ACF134772105761F005F3809 /* RNBridgeTools.h */,
+				ACF134782105761F005F3809 /* RNBridgeTools.m */,
+				ACF134A021057718005F3809 /* Tools */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -622,6 +640,22 @@
 				ACE3DD5720FDCAA800613E64 /* libRNDeviceInfo.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ACF134A021057718005F3809 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				ACF13516210584F8005F3809 /* ArcToCircleLayer.h */,
+				ACF1351C210584F8005F3809 /* ArcToCircleLayer.m */,
+				ACF1351A210584F8005F3809 /* LoadingView.h */,
+				ACF13517210584F8005F3809 /* LoadingView.m */,
+				ACF13519210584F8005F3809 /* Reachability.h */,
+				ACF1351B210584F8005F3809 /* Reachability.m */,
+				ACF13518210584F8005F3809 /* RNTools.h */,
+				ACF134EF210584F7005F3809 /* RNTools.m */,
+			);
+			name = Tools;
+			path = RNProject/Tools;
 			sourceTree = "<group>";
 		};
 		ADBDB9201DFEBF0600ED6528 /* Products */ = {
@@ -1155,6 +1189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				ACF1351E210584F8005F3809 /* LoadingView.m in Sources */,
+				ACF1351D210584F8005F3809 /* RNTools.m in Sources */,
+				ACF13520210584F8005F3809 /* ArcToCircleLayer.m in Sources */,
+				ACF134792105761F005F3809 /* RNBridgeTools.m in Sources */,
+				ACF1351F210584F8005F3809 /* Reachability.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
