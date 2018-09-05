@@ -12,7 +12,23 @@ import {
 } from 'react-native';
 import BasePage from "./BasePage";
 import FakeNavBar from "../weight/FakeNavBar";
-import DeviceInfo from 'react-native-device-info';
+import Svg,{
+    Circle,
+    Ellipse,
+    G,
+    LinearGradient,
+    RadialGradient,
+    Line,
+    Path,
+    Polygon,
+    Polyline,
+    Rect,
+    Symbol,
+    Use,
+    Defs,
+    Stop
+} from 'react-native-svg';
+// import DeviceInfo from 'react-native-device-info';
 // import actions from '../actions/actionIndex';
 import * as appConfig from '../config/appConfig';
 
@@ -20,6 +36,7 @@ export default class HomeDetailPage extends BasePage {
 
     componentDidMount(){
         const {actions} = this.props;
+        this.testFun();
         actions.testAction({},{
             cbError: ({ code, msg }) => {
                 console.log('');
@@ -30,6 +47,10 @@ export default class HomeDetailPage extends BasePage {
         })
         
     }
+
+    testFun = () => {
+        console.log('hhhhh');
+    };
 
     render() {
         const {navigation ,homeDetail} = this.props;
@@ -42,6 +63,29 @@ export default class HomeDetailPage extends BasePage {
                 <Text style={styles.instructions}>
                     二级页面，二级页面{appConfig.DEVICE_UID}
                 </Text>
+                <Svg width="200" height="200">
+    {/*<Circle*/}
+        {/*cx="50"*/}
+        {/*cy="50"*/}
+        {/*r="45"*/}
+        {/*stroke="blue"*/}
+        {/*strokeWidth="5.5"*/}
+        {/*fill="green"*/}
+    {/*/>*/}
+                    {/*<Path*/}
+                    {/*d="M10 10 L25 30 L100 50 A50 50"*/}
+                    {/*fill="none"*/}
+                    {/*stroke="red"*/}
+                    {/*/>*/}
+
+                    <Path d="M60,35 l 50,-25
+           a25,25 -30 0,1 50,-25 l 50,-25
+           a25,50 -30 0,1 50,-25 l 50,-25
+           a25,75 -30 0,1 50,-25 l 50,-25
+           a25,100 -30 0,1 50,-25 l 50,-25"
+                          fill="none" stroke="red" stroke-width="5" />
+
+                </Svg>
             </View>
             </FakeNavBar>
         );
