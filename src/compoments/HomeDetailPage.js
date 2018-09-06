@@ -7,27 +7,15 @@
 import React, { Component } from 'react';
 import {
     StyleSheet,
-    Text,
-    View
+
+    View,
+    ART
 } from 'react-native';
 import BasePage from "./BasePage";
 import FakeNavBar from "../weight/FakeNavBar";
-import Svg,{
-    Circle,
-    Ellipse,
-    G,
-    LinearGradient,
-    RadialGradient,
-    Line,
-    Path,
-    Polygon,
-    Polyline,
-    Rect,
-    Symbol,
-    Use,
-    Defs,
-    Stop
-} from 'react-native-svg';
+import Wedge from './Wedge'
+// const {Surface, Shape, Path} = ART;
+
 // import DeviceInfo from 'react-native-device-info';
 // import actions from '../actions/actionIndex';
 import * as appConfig from '../config/appConfig';
@@ -53,42 +41,70 @@ export default class HomeDetailPage extends BasePage {
     };
 
     render() {
-        const {navigation ,homeDetail} = this.props;
-        return (
-            <FakeNavBar title={'二级页面'} navigation={navigation}>
+        return(
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to 二级页面，二级页面!
-                </Text>
-                <Text style={styles.instructions}>
-                    二级页面，二级页面{appConfig.DEVICE_UID}
-                </Text>
-                <Svg width="200" height="200">
-    {/*<Circle*/}
-        {/*cx="50"*/}
-        {/*cy="50"*/}
-        {/*r="45"*/}
-        {/*stroke="blue"*/}
-        {/*strokeWidth="5.5"*/}
-        {/*fill="green"*/}
-    {/*/>*/}
-                    {/*<Path*/}
-                    {/*d="M10 10 L25 30 L100 50 A50 50"*/}
-                    {/*fill="none"*/}
-                    {/*stroke="red"*/}
-                    {/*/>*/}
+                <ART.Surface width={150} height={150} style={{backgroundColor:'red'}}>
+                    <Wedge
+                        outerRadius={50}
+                        startAngle={0}
+                        endAngle={60}
+                        originX={25}
+                        originY={50}
+                        fill="blue"/>
 
-                    <Path d="M60,35 l 50,-25
-           a25,25 -30 0,1 50,-25 l 50,-25
-           a25,50 -30 0,1 50,-25 l 50,-25
-           a25,75 -30 0,1 50,-25 l 50,-25
-           a25,100 -30 0,1 50,-25 l 50,-25"
-                          fill="none" stroke="red" stroke-width="5" />
+                    <Wedge
+                        outerRadius={50}
+                        startAngle={60}
+                        endAngle={90}
+                        originX={25}
+                        originY={50}
+                        fill="black"
+                    />
+                    <Wedge
+                        innerRadius={40}
+                        outerRadius={50}
+                        startAngle={90}
+                        endAngle={360}
+                        originX={25}
+                        originY={50}
+                        fill="green"
+                    />
 
-                </Svg>
+
+
+
+                </ART.Surface>
             </View>
-            </FakeNavBar>
-        );
+        )
+
+
+
+
+
+
+        // const path = Path()
+        //     .moveTo(1,1)
+        //     .lineTo(300,1);
+
+        // return (
+        //     <FakeNavBar title={'二级页面'} navigation={navigation}>
+        //     <View style={styles.container}>
+        //         <Text style={styles.welcome}>
+        //             Welcome to 二级页面，二级页面!
+        //         </Text>
+        //         <Text style={styles.instructions}>
+        //             二级页面，二级页面{appConfig.DEVICE_UID}
+        //         </Text>
+        //
+        //         <ART.Surface width={300} height={2}>
+        //             <ART.Shape d={path} stroke="#000000" strokeWidth={2} strokeDash={[10,5]}/>
+        //         </ART.Surface>
+        //
+        //
+        //
+        //     </View>
+        //     </FakeNavBar>
+        // );
     }
 
 }
