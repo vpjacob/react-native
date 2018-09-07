@@ -7,22 +7,26 @@
 import React, { Component } from 'react';
 import {
     StyleSheet,
-
+    Text,
     View,
     ART
 } from 'react-native';
 import BasePage from "./BasePage";
 import FakeNavBar from "../weight/FakeNavBar";
 import Wedge from './Wedge'
-// const {Surface, Shape, Path} = ART;
-
+const {Surface, Shape, Path} = ART;
+import {RadarChart} from 'react-native-charts-wrapper';
 // import DeviceInfo from 'react-native-device-info';
 // import actions from '../actions/actionIndex';
 import * as appConfig from '../config/appConfig';
 
 export default class HomeDetailPage extends BasePage {
 
+
+
     componentDidMount(){
+
+
         const {actions} = this.props;
         this.testFun();
         actions.testAction({},{
@@ -41,70 +45,66 @@ export default class HomeDetailPage extends BasePage {
     };
 
     render() {
-        return(
-            <View style={styles.container}>
-                <ART.Surface width={150} height={150} style={{backgroundColor:'red'}}>
-                    <Wedge
-                        outerRadius={50}
-                        startAngle={0}
-                        endAngle={60}
-                        originX={25}
-                        originY={50}
-                        fill="blue"/>
-
-                    <Wedge
-                        outerRadius={50}
-                        startAngle={60}
-                        endAngle={90}
-                        originX={25}
-                        originY={50}
-                        fill="black"
-                    />
-                    <Wedge
-                        innerRadius={40}
-                        outerRadius={50}
-                        startAngle={90}
-                        endAngle={360}
-                        originX={25}
-                        originY={50}
-                        fill="green"
-                    />
-
-
-
-
-                </ART.Surface>
-            </View>
-        )
-
-
-
-
-
-
-        // const path = Path()
-        //     .moveTo(1,1)
-        //     .lineTo(300,1);
-
-        // return (
-        //     <FakeNavBar title={'二级页面'} navigation={navigation}>
+        // return(
         //     <View style={styles.container}>
-        //         <Text style={styles.welcome}>
-        //             Welcome to 二级页面，二级页面!
-        //         </Text>
-        //         <Text style={styles.instructions}>
-        //             二级页面，二级页面{appConfig.DEVICE_UID}
-        //         </Text>
+        //         <ART.Surface width={150} height={150} style={{backgroundColor:'red'}}>
+        //             <Wedge
+        //                 outerRadius={50}
+        //                 startAngle={0}
+        //                 endAngle={60}
+        //                 originX={25}
+        //                 originY={50}
+        //                 fill="blue"/>
         //
-        //         <ART.Surface width={300} height={2}>
-        //             <ART.Shape d={path} stroke="#000000" strokeWidth={2} strokeDash={[10,5]}/>
+        //             <Wedge
+        //                 outerRadius={50}
+        //                 startAngle={60}
+        //                 endAngle={90}
+        //                 originX={25}
+        //                 originY={50}
+        //                 fill="black"
+        //             />
+        //             <Wedge
+        //                 innerRadius={40}
+        //                 outerRadius={50}
+        //                 startAngle={90}
+        //                 endAngle={360}
+        //                 originX={25}
+        //                 originY={50}
+        //                 fill="green"
+        //             >
+        //
+        //             </Wedge>
+        //
+        //             <ART.Text strokeWidth={1} stroke="#000" font="bold 15px Heiti SC" path={new Path().moveTo(140,40).lineTo(99,10)} >React</ART.Text>
+        //
+        //
         //         </ART.Surface>
         //
-        //
-        //
         //     </View>
-        //     </FakeNavBar>
-        // );
+        // )
+
+
+
+        const path = Path()
+            .moveTo(1,1)
+            .lineTo(300,1);
+
+        return (
+            <FakeNavBar title={'二级页面'} navigation={this.props.navigation}>
+            <View style={styles.container}>
+                <Text style={styles.welcome}>
+                    Welcome to 二级页面，二级页面!
+                </Text>
+                <Text style={styles.instructions}>
+                    二级页面，二级页面{appConfig.DEVICE_UID}
+                </Text>
+
+
+
+            </View>
+            </FakeNavBar>
+        );
     }
 
 }
