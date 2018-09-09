@@ -14,15 +14,18 @@ import {
 import BasePage from "./BasePage";
 import FakeNavBar from "../weight/FakeNavBar";
 import Wedge from './Wedge'
-// const {Surface, Shape, Path} = ART;
-
+const {Surface, Shape, Path} = ART;
 // import DeviceInfo from 'react-native-device-info';
 // import actions from '../actions/actionIndex';
 import * as appConfig from '../config/appConfig';
 
 export default class HomeDetailPage extends BasePage {
 
+
+
     componentDidMount(){
+
+
         const {actions} = this.props;
         this.testFun();
         actions.testAction({},{
@@ -129,6 +132,7 @@ console.log('----',this.props.homeDetail);
 
 
                 </ART.Surface>
+
 
 
 
