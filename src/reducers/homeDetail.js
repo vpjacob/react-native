@@ -1,13 +1,13 @@
 import _ from 'lodash'
 
 const initialState = {
-    city:'china'
+    city:'china',city_id:'hh'
 }
 
 const act = (state,action) => {
-    const {city} = action.data
+    const {city,city_id,ip} = action.data
     return _.assign({},{
-        ...state,city
+        ...state,city,city_id,ip
     })
 }
 
