@@ -1,11 +1,11 @@
 import AppPage from '../compoments/MinePage';
-import HomePage from '../compoments/HomePage';
+import HomePageContainer from '../container/HomePageContainer';
 
 export const tabBarButton = [
     {
         'tabName': '首页',
         "tabRoutes": 'route.HomePage',
-        "tabRoutesContains": HomePage,
+        "tabRoutesContains": HomePageContainer,
         "tabIconNormal":"homeIconNormal",
         "tabIconSelected":'homeIconSelected',
 
