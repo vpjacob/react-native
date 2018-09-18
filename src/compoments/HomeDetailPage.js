@@ -18,10 +18,7 @@ import Wedge from './Wedge'
 
 const {Surface, Shape, Path} = ART;
 import Swiper from 'react-native-swiper';
-// import DeviceInfo from 'react-native-device-info';
-// import actions from '../actions/actionIndex';
 import * as appConfig from '../config/appConfig';
-import axios from 'axios';
 import * as c from "../constants/constantsIndex";
 import * as _ from "lodash";
 
@@ -41,20 +38,6 @@ export default class HomeDetailPage extends BasePage {
                 console.log('====', data);
             }
         });
-
-
-        actions.bannerData({
-            "script": "mobile.business.product",
-            "needTrascation": false,
-            "funName": "queryCarouselList"
-        }, {
-            cbError: (code, msg) => {
-
-            }, cbSuccess: (data) => {
-                let js = JSON.parse(data.formDataset.carouselList)
-                console.log('====jss', js)
-            }
-        })
 
 
     }

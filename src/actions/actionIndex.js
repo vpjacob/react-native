@@ -8,3 +8,7 @@ export const testAction = makeAsyncAction({
 export const bannerData = makeAsyncActionGet({
     url:'http://www.ppke.cn/api/execscript',success:"BANNER",error:actionTypes.ERROR
 })
+
+export const iconList = makeAsyncActionGet({
+    url:'http://www.ppke.cn/api/execscript',success:'ICONLIST',error:actionTypes.ERROR
+})

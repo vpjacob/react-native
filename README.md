@@ -27,7 +27,43 @@
 - App.js	
 - index.js	`ios调用rn的第一个文件，code-push在此写`
 
+## long long ago效果概览
+
 ![img](reademeImg/01.png)
+
+
+
+
+
+##Lodash使用，来构成小图标排列
+```
+会得到一大长串的数组，有12个对象，
+首先使用chunk，将数组隔成4个4个的。一共3个二维数组
+
+    items = (items)=>{
+		//12个对象分隔成4个的二维数组
+       return( _.map(_.chunk(items,4),(value ,index)=>{
+
+            return <View key={index} style={{flexDirection:'row',marginTop:c.screenPadding}}>
+					//将二维数组再次遍历
+                {_.map(value,(v,i)=>{
+                    return (
+                        <View key={i} style={{flex:1,backgroundColor:'gray',marginTop:c.screenPadding,alignItems:'center'}}>
+
+                            <Image style={{width:c.fixPx(100),height:c.fixPx(100)}} source={{url:"http://www.ppke.cn" + v.image}}/>
+                            <Text style={{textAlign:'center',fontSize:c.fixPx(18)}}>{v.name}</Text>
+                        </View>
+                        )
+                })}
+            </View>
+        })
+       )
+    }
+
+```
+
+
+![img](reademeImg/05.jpg)
 
 
 
