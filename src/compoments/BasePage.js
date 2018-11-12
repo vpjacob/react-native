@@ -14,12 +14,12 @@ export default class BasePage extends Component{
     /**路由跳转*/
     changeNavigator = (screenKey, screenProps,screenActions) => {
         const {navigate} = this.props.navigation;
-        if (isRouteExit(screenKey)) {
+        // if (isRouteExit(screenKey)) {
             navigate(screenKey, screenProps, screenActions);
             // Keyboard.dismiss();
-        }else{
-            showMsg('路由器未注册或不存在')
-        }
+        // }else{
+        //     showMsg('路由器未注册或不存在')
+        // }
     }
 
 
