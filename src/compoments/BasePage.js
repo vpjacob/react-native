@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {View, StyleSheet, Text,InteractionManager,StatusBar,Keyboard} from "react-native";
 // TODO 加入路由判断
-import {isRouteExit, showMsg} from "../utils/common";
+// import {isRouteExit, showMsg} from "../utils/common";
 
 export default class BasePage extends Component{
     constructor(){

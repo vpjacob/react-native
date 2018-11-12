@@ -38,7 +38,3 @@ export const hideLoading = () => {
     NativeReactBridge.hiddenNativeLoading();
 }
 
-/**检测路由是否存在*/
-// export const isRouteExit = (screenKey) => {
-//     return _.get(AppRouteLists, screenKey)
-// }

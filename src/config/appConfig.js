@@ -18,7 +18,6 @@ export const DEVICEID = DeviceInfo.getModel();
  * 操作系统
  */
 export const OS = Platform.OS;
-
 /**
  * UID
  */
